@@ -9,137 +9,181 @@
 </head>
 <body>
     <header>
-        <h1>Deseja saber mais sobre nossos serviços?</h1>
-        <p>Preencha o formulário e tenha total acesso a nossos serviços!</p>
+        <div class="div-title">
+            <h1 class="title">Saiba mais sobre a UFMS</h1>
+            <p class="subtitle">Preencha o formulário e agende uma visita!</p>
+        </div>
     </header>
     <main>
-        <form action="envia.rs" method="post">
-            <fieldset id="personaldata">
-                <label>Nome Completo:</label>
-                <input type="text" required>
+        <div class="div-form">
+            <form action="envia.rs" method="post" class="formcss" autocomplete="on">
+                <fieldset id="personaldata" class="fields1">
+                    <legend>Dados pessoais</legend>
+                    <br>
+                    <p>
+                        <label for="iname">Nome Completo:</label>
+                        <input type="text" id="iname" class="input-css" required>
+                    </p>
+                    <br>
+                    <p>
+                        <label for="icpf">CPF:</label>
+                        <input type="text" name="cpf" maxlength="9" id="icpf" required>
+                    </p>
+                    <br>
+                    <p>
+                        <label for="ibirthday">Data de nascimento:</label>
+                        <input type="date" name="birthday" id="ibirthday" required>
+                        <label>Sexo:</label>
+                        <input type="radio" name="sex" id="sexm" value="M">
+                        <label for="M">M</label> 
+                        <input type="radio" name="sex" id="sexf" value="F">
+                        <label for="F">F</label>
+                    </p>
+                    <br>
+                    <p>
+                        <label for="imarital">Estado cívil:</label>
+                        <select name="marital" id="imarital">
+                            <option value="solteiro">Solteiro</option>
+                            <option value="casado">Casado</option>
+                            <option value="viúvo">Viúvo</option>
+                            <option value="Divorciado">Divorciado</option>
+                        </select>
+                    </p>
+                    <br>
+                </fieldset>
+                <fieldset id="contactdetails" class="fields2">
+                    <legend>Dados de contato</legend>
+                    <br>
+                    <p>
+                        <label for="iemail">Email:</label>
+                        <input type="email" name="email" id="iemail" class="input-css" required>
+                    </p>
+                    <br>
+                    <p>
+                        <label for="iweb">Website:</label>
+                        <input type="text" id="iweb" class="input-css">
+                    </p>
+                    <br>
+                    <p>
+                        <label for="icep">CEP:</label>
+                        <input type="text" id="icep" required>
+                    </p>
+                    <br>
+                    <p>
+                        <label for="iadress">Endereço:</label>
+                        <input type="text" id="iadress" class="input-css" required>
+                    </p>
+                    <br>
+                    <p>
+                        <label for="inumber">Número: </label>
+                        <input type="number" id="inumber" name="housenumber" id="hn">
+                    </p>
+                    <br>
+                    <p>
+                        <label for="ineighborhood">Bairro:</label>
+                        <input type="text" id="ineighborhood" required>
+                        <label for="icity" style="text-align: right;">Cidade:</label>
+                        <input type="text" id="icity" required>
+                    </p>
+                    <br>
+                    <p>
+                        <label>UF:</label>
+                        <select id="state" required>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </p>
+                    <br>
+                    <p>
+                        <label for="itel">Telefone:</label>
+                        <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\([0-9]{2}\)[0-9]{4}-[0-9]{4}$"  placeholder="(xx)xxxx-xxxx" maxlength="13">
+                    </p>
+                    <br>
+                    <p>
+                        <label for="icell">Celular:</label>
+                        <input type="tel" id="icell" pattern="^\([0-9]{2}\)[9]{1}[0-9]{3}-[0-9]{4}$" placeholder="(xx)xxxx-xxxx" maxlength="13" required>
+                    </p>
+                </fieldset>
+                <div class="div-loginbutton">
+                    <p>
+                        <label>Login:</label>
+                        <input type="text" required>
+                    </p>
+                    <br>
+                    <p>
+                        <label>Senha:</label>
+                        <input type="password" maxlength="8" placeholder="Até 8 dígitos" name="passwd" id="passwd" required>
+                    </p>
+                    <p style="margin-top: 10px;">Sobre quais assuntos deseja receber informações?</p>
+                </div>
+                <fieldset id="interests" class="fields3">
+                    <input type="checkbox" name="check" id="tech" value="tech">
+                    <label for="tech">Tecnologia</label>
+                    <input type="checkbox" name="check" id="sports" value="sports">
+                    <label for="sports">Esportes</label>
+                    <input type="checkbox" name="check" id="auto" value="auto">
+                    <label for="auto">Automóveis</label>
+                    <input type="checkbox" name="check" id="cook" value="cook">
+                    <label for="cook">Culinária</label>
+                    <input type="checkbox" name="check" id="politics" value="politics">
+                    <label for="politics">Política</label>
+                    <input type="checkbox" name="check" id="police" value="police">
+                    <label for="police">Policial</label>
+                    <input type="checkbox" name="check" id="weather" value="weather">
+                    <label for="weather">Tempo</label>
+                    <input type="checkbox" name="check" id="cult" value="cult">
+                    <label for="cult">Cultura</label>
+                    <input type="checkbox" name="check" id="economics" value="economics">
+                    <label for="economics">Economia</label>
+                    <input type="checkbox" name="check" id="games" value="games">
+                    <label for="games">Jogos</label>
+                    <input type="checkbox" name="check" id="education" value="education">
+                    <label for="education">Educação</label>
+                    <input type="checkbox" name="check" id="trip" value="trip">
+                    <label for="trip">Viagem</label>
+                    <input type="checkbox" name="check" id="jobs" value="jobs">
+                    <label for="jobs">Empregos</label>
+                    <input type="checkbox" name="check" id="style" value="style">
+                    <label for="style">Moda e Estilo</label>
+                </fieldset>
                 <br>
-                <label>CPF:</label>
-                <input type="number" required>
-                <br>
-                <label>Data de nascimento:</label>
-                <input type="date" name="birthday" id="bithday" required>
-                <label>Sexo:</label>
-                <input type="radio" name="sex" id="sexm" value="M">
-                <label for="M">M</label> 
-                <input type="radio" name="sex" id="sexf" value="F">
-                <label for="F">F</label>
-                <br>
-                <label>Estado cívil:</label> 
-                <select name="marital" id="marital">
-                    <option value="solteiro">Solteiro</option>
-                    <option value="casado">Casado</option>
-                    <option value="viúvo">Viúvo</option>
-                    <option value="Divorciado">Divorciado</option>
-                </select>
-
-            </fieldset>
-            <fieldset id="contactdetails">
-                <label>Email:</label> 
-                <input type="email" name="email" id="email" required>
-                <br>
-                <label>Website:</label> 
-                <input type="text">
-                <br>
-                <label>CEP:</label> 
-                <input type="text" required>
-                <br>
-                <label>Endereço:</label> 
-                <input type="text" required>
-                <label>Número: </label>
-                <input type="number" name="housenumber" id="hn">
-                <br>
-                <label>Bairro:</label> 
-                <input type="text" required>
-                <label>Cidade:</label> 
-                <input type="text" required>
-                <br>
-                <label>UF:</label> 
-                <select id="state" required>
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                    <option value="EX">Estrangeiro</option>
-                </select>
-                <br>
-                <label>Telefone:</label> 
-                <input type="number">
-                <br>
-                <label>Celular:</label> 
-                <input type="number" required>
-            </fieldset>
-
-                <label>Login:</label>
-                <input type="text" required>
-                <br> 
-                <label>Senha:</label> 
-                <input type="password" name="passwd" id="passwd" required>
-
-                <p>Deseja receber informações sobre os seguintes assuntos abaixo:</p>
-            <fieldset id="interests">
-                <input type="checkbox" name="check" id="tech" value="tech">
-                <label for="tech">Tecnologia</label>
-                <input type="checkbox" name="check" id="sports" value="sports">
-                <label for="sports">Esportes</label>
-                <input type="checkbox" name="check" id="auto" value="auto">
-                <label for="auto">Automóveis</label>
-                <input type="checkbox" name="check" id="cook" value="cook">
-                <label for="cook">Culinária</label>
-                <input type="checkbox" name="check" id="politics" value="politics">
-                <label for="politics">Política</label>
-                <input type="checkbox" name="check" id="police" value="police">
-                <label for="police">Policial</label>
-                <input type="checkbox" name="check" id="weather" value="weather">
-                <label for="weather">Tempo</label>
-                <input type="checkbox" name="check" id="cult" value="cult">
-                <label for="cult">Cultura</label>
-                <input type="checkbox" name="check" id="economics" value="economics">
-                <label for="economics">Economia</label>
-                <input type="checkbox" name="check" id="games" value="games">
-                <label for="games">Jogos</label>
-                <input type="checkbox" name="check" id="education" value="education">
-                <label for="education">Educação</label>
-                <input type="checkbox" name="check" id="trip" value="trip">
-                <label for="trip">Viagem</label>
-                <input type="checkbox" name="check" id="jobs" value="jobs">
-                <label for="jobs">Empregos</label>
-                <input type="checkbox" name="check" id="style" value="style">
-                <label for="style">Moda e Estilo</label>
-            </fieldset>
-            <input type="checkbox" name="tech" id="tech" required>
-            <label>Li as regras de cadastro e autorizo a criação do usuário</label>
-            <br>
-            <input type="submit" value="Confirmar">
-            <button>Retornar</button>
-        </form>
+                <div class="div-buttons">
+                    <input type="checkbox" name="tech" id="tech" required>
+                    <label style="width: 500px;">Li as regras de cadastro e autorizo a criação do usuário</label>
+                    <br>
+                    <div class="buttons">
+                        <input type="submit" value="Confirmar">
+                        <button>Retornar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </main>
 </body>
 </html>
