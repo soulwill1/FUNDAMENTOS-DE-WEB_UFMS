@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resetcss.css">
     <title>Atividade formulário</title>
 </head>
 <body>
@@ -13,42 +14,50 @@
     </header>
     <main>
         <form action="envia.rs" method="post">
-
             <fieldset id="personaldata">
                 <label>Nome Completo:</label>
                 <input type="text" required>
+                <br>
                 <label>CPF:</label>
                 <input type="number" required>
+                <br>
                 <label>Data de nascimento:</label>
                 <input type="date" name="birthday" id="bithday" required>
+                <label>Sexo:</label>
+                <input type="radio" name="sex" id="sexm" value="M">
+                <label for="M">M</label> 
+                <input type="radio" name="sex" id="sexf" value="F">
+                <label for="F">F</label>
+                <br>
                 <label>Estado cívil:</label> 
                 <select name="marital" id="marital">
                     <option value="solteiro">Solteiro</option>
                     <option value="casado">Casado</option>
                     <option value="viúvo">Viúvo</option>
                     <option value="Divorciado">Divorciado</option>
-                <label>Sexo:</label>
-                <input type="radio" name="sex" id="sexm" value="M">
-                <label for="M">M</label> 
-                <input type="radio" name="sex" id="sexf" value="F">
-                <label for="F">F</label>
                 </select>
-
 
             </fieldset>
             <fieldset id="contactdetails">
                 <label>Email:</label> 
                 <input type="email" name="email" id="email" required>
+                <br>
                 <label>Website:</label> 
                 <input type="text">
+                <br>
+                <label>CEP:</label> 
+                <input type="text" required>
+                <br>
                 <label>Endereço:</label> 
                 <input type="text" required>
+                <label>Número: </label>
+                <input type="number" name="housenumber" id="hn">
+                <br>
                 <label>Bairro:</label> 
                 <input type="text" required>
                 <label>Cidade:</label> 
                 <input type="text" required>
-                <label>CEP:</label> 
-                <input type="text" required>
+                <br>
                 <label>UF:</label> 
                 <select id="state" required>
                     <option value="AC">Acre</option>
@@ -80,13 +89,19 @@
                     <option value="TO">Tocantins</option>
                     <option value="EX">Estrangeiro</option>
                 </select>
+                <br>
                 <label>Telefone:</label> 
                 <input type="number">
+                <br>
                 <label>Celular:</label> 
                 <input type="number" required>
             </fieldset>
 
-                Login: <input type="text" required> Senha: <input type="password" name="passwd" id="passwd" required>
+                <label>Login:</label>
+                <input type="text" required>
+                <br> 
+                <label>Senha:</label> 
+                <input type="password" name="passwd" id="passwd" required>
 
                 <p>Deseja receber informações sobre os seguintes assuntos abaixo:</p>
             <fieldset id="interests">
@@ -119,8 +134,9 @@
                 <input type="checkbox" name="check" id="style" value="style">
                 <label for="style">Moda e Estilo</label>
             </fieldset>
-            <input type="checkbox" name="tech" id="tech" required>Li as regras de cadastro e autorizo a criação do usuário
-
+            <input type="checkbox" name="tech" id="tech" required>
+            <label>Li as regras de cadastro e autorizo a criação do usuário</label>
+            <br>
             <input type="submit" value="Confirmar">
             <button>Retornar</button>
         </form>
