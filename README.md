@@ -1,3 +1,3 @@
-# facul
+# ATIVIDADE UFMS
 
-Trabalho realizado para a aula de Introdução a ferramentas web (HTML, CSS e JS)
+Atividade realizada para o Módulo 2 – HTML5 e CSS - Criação do formulário
