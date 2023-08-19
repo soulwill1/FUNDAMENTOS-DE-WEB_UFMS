@@ -11,6 +11,10 @@ label{
     display: inline-block;
 }
 
+input:invalid {
+    border-color: #df8c8c;
+}
+
 .input-css{
     width: 480px;
 }
